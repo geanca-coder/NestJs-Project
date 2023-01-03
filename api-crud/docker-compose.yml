@@ -9,8 +9,19 @@ services:
       MYSQL_USER: SA
       MYSQL_PASSWORD: password
       MYSQL_DATABASE: nestjs
+
+  test-db:
+    image: mysql:latest
+    ports:
+      - 3305:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: SA
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: nestjs
     networks:
       - nestjsdemo
+
 networks:
   nestjsdemo:
 

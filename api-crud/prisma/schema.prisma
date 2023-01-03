@@ -25,6 +25,7 @@ model User{
   @@map("users")
 }
 
+
 model Bookmark{
   
   id Int @id @default(autoincrement())
